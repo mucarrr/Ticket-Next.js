@@ -1,8 +1,10 @@
 'use client'
 import React, { FC, useState } from 'react'
-import { Menu } from 'lucide-react'
+import { LogOut, Menu, HelpCircle } from 'lucide-react'
 import logo from '@/assets/logo.webp'
 import Image from 'next/image'
+import { navigationItems } from '@/utils/constants'
+import Link from 'next/link'
 
 const Sidebar:FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(true)
@@ -24,6 +26,27 @@ const Sidebar:FC = () => {
             <Menu className="size-5" />
           </button>
         </div>
+      </div>
+      <div className="flex-1 gap-2 px-4 space-y-2">
+        {navigationItems.map((item,key)=> <Link href={item.href} key={key} className={`flex items-center gap-3 px-3 py-2 hover:bg-zinc-800 rounded-lg transition ${isCollapsed ? "justify-center" : "justify-start"}`}>
+        <item.icon className="size-5 text-gray-100 flex-shrink-0" />
+        {!isCollapsed && <p className="text-sm text-gray-100 font-bold">{item.label}</p>}
+        </Link>)}
+      </div>
+      <div className="p-4 space-y-2">
+        <button className="w-full bg-zinc-800 text-gray-100 hover:bg-zinc-700 rounded-lg p-2">
+          <div className="flex items-center gap-3">
+            <HelpCircle className="size-5 text-gray-100 flex-shrink-0" />
+            {!isCollapsed && <p className="text-sm text-gray-100 font-bold">Help</p>}
+          </div>
+        </button>
+        
+        <button className="w-full bg-zinc-800 text-gray-100 hover:bg-zinc-700 rounded-lg p-2">
+          <div className="flex items-center gap-3">
+            <LogOut className="size-5 text-gray-100 flex-shrink-0" />
+            {!isCollapsed && <p className="text-sm text-gray-100 font-bold">Logout</p>}
+          </div>
+        </button>
       </div>
     </aside>
   )
