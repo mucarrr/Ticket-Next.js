@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import connectMongo from "@/utils/coonectMongo";
 import Ticket from "../../models/ticket";
 
-export const GET = async(req:Request, {params}:{params:{id:string}}) => {
+export const GET = async(req:Request, {params}:{params:{id:string}}) => { //{params} bir object. icinde params var. onun da icinde id var.
     try{
         await connectMongo();
         const {id} = await params;

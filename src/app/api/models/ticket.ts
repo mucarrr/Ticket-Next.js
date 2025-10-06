@@ -20,11 +20,10 @@ export const ticketSchema = new Schema<ITicket>({
     versionKey: false, //_v degerini gostermemek icin
     toJSON:{
         virtuals: true,
-        transform: (doc, ret) => {
+        transform: function(doc, ret) {
             delete (ret as any)._id;
             return ret;
         },
-        
     },
     toObject: {
         virtuals: true,
