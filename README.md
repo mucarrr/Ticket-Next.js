@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Next.js Full-Stack Ticket Management System 
+Built an entire full-stack application using Next.js 14 for both frontend and backend development. No separate backend framework needed - Next.js handled everything!
 
-## Getting Started
+# ✨ Features:
+📊 Dashboard with real-time statistics
 
-First, run the development server:
+🎫 Create, edit, and delete tickets
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📱 Fully responsive design
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎨 Modern UI/UX with dark theme
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔄 Real-time updates
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📈 Progress tracking
 
-## Learn More
+🏷️ Category and priority management
 
-To learn more about Next.js, take a look at the following resources:
+🔍 Search functionality
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 🛠️ Full-Stack Tech Stack:
+Next.js 14 (App Router) - Frontend & Backend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Next.js API Routes - Server-side logic
 
-## Deploy on Vercel
+Next.js Server Actions - Form handling
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MongoDB + Mongoose
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+TypeScript
+
+Tailwind CSS
+
+Lucide Icon
+
+# The beauty of Next.js: 
+One framework, complete full-stack solution! Built the entire application - from database models to UI components - all within Next.js ecosystem.
+
+This project showcases how Next.js enables rapid full-stack development with seamless frontend-backend integration.
+
+# The preview of the project
+![](ticket.gif)
