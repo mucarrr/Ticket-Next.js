@@ -2,16 +2,16 @@ import { NextResponse } from "next/server";
 import connectMongo from "@/utils/coonectMongo";
 import Ticket, { ITicket } from "../models/ticket";
 
-export async function POST(request: Request) {
-  try {
-    await connectMongo(); // nextde her seferinde 
-    const body = (await request.json()) as ITicket;
-    const newTicket = await Ticket.create(body);
-    return NextResponse.json({ message: "Ticket created successfully", ticket: newTicket }, { status: 201 });
-  } catch (error) {
-    return NextResponse.json({ message: "Ticket creation failed", error: error instanceof Error ? error.message : "Unknown error" }, { status: 400 });
-  }
-}
+// export async function POST(request: Request) {
+//   try {
+//     await connectMongo(); // nextde her seferinde 
+//     const body = (await request.json()) as ITicket;
+//     const newTicket = await Ticket.create(body);
+//     return NextResponse.json({ message: "Ticket created successfully", ticket: newTicket }, { status: 201 });
+//   } catch (error) {
+//     return NextResponse.json({ message: "Ticket creation failed", error: error instanceof Error ? error.message : "Unknown error" }, { status: 400 });
+//   }
+// }bunu use serverda form action ile yaptik
 export async function GET(request: Request) {
   try {
     await connectMongo();
