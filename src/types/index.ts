@@ -1,10 +1,10 @@
 export interface Ticket {
     title: string;
     description: string;
-    category: "software" | "hardware" | "network" | "other";
+    category: "Software" | "Hardware" | "Network" | "Other";
     priority: number;
     progress: number;
-    status: "open" | "in_progress" | "closed";
+    status: "Open" | "In Progress" | "Closed";
     createdAt: string;
     updatedAt: string;
     id: string;
@@ -23,22 +23,25 @@ export type MessageResponse = Promise<{
 export interface Statistics {
     totalTickets: number;
     ticketsByCategory: {
-        software: number;
-        hardware: number;
-        network: number;
-        other: number;
+        Software: number;
+        Hardware: number;
+        Network: number;
+        Other: number;
     };
 }
 export type StatisticsResponse = Promise<{
     "message": "string",
     "totalTickets": number,
     "ticketsByCategory": {
-        "hardware": number,
-        "software": number
+        "Hardware": number,
+        "Software": number,
+        "Network": number,
+        "Other": number
     },
     "ticketsByStatus": {
-        "open": number,
-        "closed": number
+        "Open": number,
+        "Closed": number,
+        "In Progress": number
     },
     "completionRate": number,
     "highPriorityTickets": number,

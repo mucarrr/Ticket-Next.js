@@ -3,7 +3,7 @@
 
 
 import mongoose from "mongoose";
-const MONGODB_URI = process.env.MONGODB_URI as string || "mongodb://localhost:27017";
+const MONGODB_URI = process.env.MONGODB_URI as string || "mongodb://localhost:3002";
 const cached:{connection?: typeof mongoose, promise?: Promise<typeof mongoose>} = {}; //cached connection ve promise degerlerini bulundurur. cacheleri kullanarak veritabanina baglantiyi tekrar tekrar kurmayi engelleriz.
 
 const connectMongo = async (): Promise<typeof mongoose> => {

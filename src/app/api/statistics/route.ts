@@ -14,7 +14,7 @@ export const GET = async(req:Request) => {
             total[ticket.status] = (total[ticket.status] || 0) + 1;
             return total;
         }, {});
-        const closedTickets = tickets.filter((ticket) => ticket.status === "closed").length; 
+        const closedTickets = tickets.filter((ticket) => ticket.status === "Closed").length; 
         const completionRate = Number(totalTickets > 0 ? (closedTickets / totalTickets * 100).toFixed(1) : 0)
         const highPriorityTickets = tickets.filter((ticket)=>ticket.priority>4).length;
         const averagePriority = Number(tickets.reduce((total, ticket)=> total+ticket.priority, 0) / totalTickets).toFixed(1) //reduce burda toplama yapiyor.

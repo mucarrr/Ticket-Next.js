@@ -2,7 +2,7 @@ import { statusBadgeColors } from '@/utils/constants';
 import React, { FC } from 'react'
 
 interface Props {
-    status:"open" | "in_progress" | "closed";
+    status:"Open" | "In Progress" | "Closed";
 }
 
 const StatusBadge:FC<Props> = ({status}) => {

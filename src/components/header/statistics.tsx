@@ -9,11 +9,11 @@ const Statistics:FC = async () => {
         <p className="text-xs text-blue-400/70">Total Tickets</p>
       </div>
       <div className="bg-blue-900/20 text-green-400 p-3 rounded-lg">
-        <p className="text-2xl font-bold">{ticketsByStatus.closed}</p>
+        <p className="text-2xl font-bold">{ticketsByStatus.Closed || 0}</p>
         <p className="text-xs text-green-400/70">Closed Tickets</p>
       </div>
       <div className="bg-blue-900/20 text-yellow-400 p-3 rounded-lg max-lg:hidden">
-        <p className="text-2xl font-bold">{ticketsByStatus.open}</p>
+        <p className="text-2xl font-bold">{ticketsByStatus.Open || 0}</p>
         <p className="text-xs text-yellow-400/70">Open Tickets</p>
       </div>
       <div className="bg-blue-900/20 text-purple-400 p-3 rounded-lg max-lg:hidden">
